@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  width: 80px;
+  margin: 0 0.25vw 0 1vw;
+  padding: 0.5vh 0;
+}
+
+#logo-text {
+  font-size: 40px;
+  color: #eee;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(24, 158, 211);
+}
+
+.App,
+#root {
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(95, 125, 223);
+}
+
+main {
+  flex: 1;
+  margin: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1% 0;
+  justify-content: center;
+}
+
+.card {
+  width: 18%;
+  height: 30%;
+  margin: 20px;
+  padding-top: 10px;
+  border-radius: 15px;
+  background-color: rgb(49, 182, 243);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > img {
+  width: 90%;
+  height: 80%;
+}
+
+p {
+  margin: 10px;
+  text-align: center;
+  color: #eee;
+  font-size: 25px;
+  font-weight: bold;
+}
