@@ -19,13 +19,11 @@ const getNumbers = () => {
 
 getNumbers();
 
-console.log(repeated);
-
 export default function Main() {
   return (
     <main>
-      {repeated.map((n) => {
-        return <Card index={n} />;
+      {repeated.map((n, index) => {
+        return <Card index={n} key={index} />;
       })}
     </main>
   );

@@ -27,18 +27,18 @@ let imgArr = [
 ];
 
 let textArr = [
-  "ace",
-  "white beard",
-  "chopper",
-  "crocodile",
-  "doflamingo",
-  "luffy",
-  "nami",
-  "roger",
-  "sabo",
-  "sanji",
-  "usopp",
-  "zoro",
+  "Ace",
+  "White beard",
+  "Chopper",
+  "Crocodile",
+  "Doflamingo",
+  "Luffy",
+  "Nami",
+  "Roger",
+  "Sabo",
+  "Sanji",
+  "Usopp",
+  "Zoro",
 ];
 
 export default function Card(props) {
