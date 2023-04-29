@@ -1,3 +1,5 @@
+import React from "react";
+import { useEffect } from "react";
 import ace from "./../images/ace.png";
 import whiteBeard from "./../images/whiteBeard.png";
 import chopper from "./../images/chopper.png";
@@ -11,7 +13,7 @@ import sanji from "./../images/sanji.png";
 import usopp from "./../images/usopp.png";
 import zoro from "./../images/zoro.png";
 
-let imgArr = [
+const imgArr = [
   ace,
   whiteBeard,
   chopper,
@@ -26,26 +28,54 @@ let imgArr = [
   zoro,
 ];
 
-let textArr = [
-  "Ace",
-  "White beard",
-  "Chopper",
-  "Crocodile",
-  "Doflamingo",
-  "Luffy",
-  "Nami",
-  "Roger",
-  "Sabo",
-  "Sanji",
-  "Usopp",
-  "Zoro",
-];
+let clicked = {
+  ace: false,
+  whiteBeard: false,
+  chopper: false,
+  crocodile: false,
+  doflamingo: false,
+  luffy: false,
+  nami: false,
+  roger: false,
+  sabo: false,
+  sanji: false,
+  usopp: false,
+  zoro: false,
+};
 
-export default function Card(props) {
+let setAllFalse = (obj) => {
+  for (let i in obj) obj[i] = false;
+};
+
+function Card(props) {
+  const handleClick = (e) => {
+    let name = e.target.src.split("/").pop().split(".")[0];
+    if (!clicked[name]) props.setScore((prevScore) => prevScore + 1);
+    else {
+      if (props.score > props.highScore) props.setHighScore(props.score);
+      props.setScore(0);
+      setAllFalse(clicked);
+      return;
+    }
+    clicked[name] = !clicked.name;
+  };
+
+  useEffect(() => {
+    const cardElement = document.querySelector(`.card-${props.index}`);
+    cardElement.addEventListener("click", handleClick);
+    return () => {
+      cardElement.removeEventListener("click", handleClick);
+    };
+  }, [props.index]);
+
+  const randomImg = imgArr[props.index];
+  const imageName = randomImg.split("/").pop().split(".")[0];
   return (
-    <div className="card">
-      <img src={imgArr[props.index]} alt="random one piece character" />
-      <p>{textArr[props.index]}</p>
+    <div className={`card card-${props.index}`}>
+      <img src={randomImg} alt="random one piece character" />
+      <p>{imageName}</p>
     </div>
   );
 }
+
+export default Card;

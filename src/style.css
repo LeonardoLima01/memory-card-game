@@ -25,6 +25,7 @@ body {
 #logo-text {
   font-size: 40px;
   color: #eee;
+  margin-right: auto;
 }
 
 header {
@@ -64,6 +65,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .card > img {
@@ -78,4 +80,9 @@ p {
   color: #eee;
   font-size: 1.5vw;
   font-weight: bold;
+}
+
+header > h3 {
+  margin-right: 3vw;
+  color: orange;
 }

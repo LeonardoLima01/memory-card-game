@@ -1,29 +1,29 @@
-import { useEffect } from "react";
 import Card from "./Card";
 
-const generateNumber = () => Math.floor(Math.random() * 12);
+export default function Main(props) {
+  let repeated = [];
 
-let repeated;
-
-const getNumbers = () => {
-  repeated = [];
+  let randomIndex = Math.floor(Math.random() * 12);
   while (repeated.length !== 12) {
-    let n = generateNumber();
-
-    while (repeated.includes(n)) {
-      n = generateNumber();
+    while (repeated.includes(randomIndex)) {
+      randomIndex = Math.floor(Math.random() * 12);
     }
-    repeated.push(n);
+    repeated.push(randomIndex);
   }
-};
 
-getNumbers();
-
-export default function Main() {
   return (
     <main>
-      {repeated.map((n, index) => {
-        return <Card index={n} key={index} />;
+      {repeated.map((i, key) => {
+        return (
+          <Card
+            index={i}
+            key={key}
+            score={props.score}
+            setScore={props.setScore}
+            highScore={props.highScore}
+            setHighScore={props.setHighScore}
+          />
+        );
       })}
     </main>
   );
