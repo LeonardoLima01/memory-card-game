@@ -71,8 +71,12 @@ function Card(props) {
   const randomImg = imgArr[props.index];
   const imageName = randomImg.split("/").pop().split(".")[0].toLowerCase();
   return (
-    <div className={`card card-${props.index}`}>
-      <img src={randomImg} alt="random one piece character" />
+    <div className="card">
+      <img
+        className={`card-${props.index}`}
+        src={randomImg}
+        alt="random one piece character"
+      />
       <p>{imageName}</p>
     </div>
   );
