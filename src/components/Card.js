@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import ace from "./../images/ace.png";
-import whiteBeard from "./../images/whiteBeard.png";
+import whitebeard from "./../images/whiteBeard.png";
 import chopper from "./../images/chopper.png";
 import crocodile from "./../images/crocodile.png";
 import doflamingo from "./../images/doflamingo.png";
@@ -15,7 +15,7 @@ import zoro from "./../images/zoro.png";
 
 const imgArr = [
   ace,
-  whiteBeard,
+  whitebeard,
   chopper,
   crocodile,
   doflamingo,
@@ -30,7 +30,7 @@ const imgArr = [
 
 let clicked = {
   ace: false,
-  whiteBeard: false,
+  whitebeard: false,
   chopper: false,
   crocodile: false,
   doflamingo: false,
@@ -69,7 +69,7 @@ function Card(props) {
   }, [props.index]);
 
   const randomImg = imgArr[props.index];
-  const imageName = randomImg.split("/").pop().split(".")[0];
+  const imageName = randomImg.split("/").pop().split(".")[0].toLowerCase();
   return (
     <div className={`card card-${props.index}`}>
       <img src={randomImg} alt="random one piece character" />
