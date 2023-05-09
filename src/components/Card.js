@@ -66,6 +66,7 @@ function Card(props) {
     return () => {
       cardElement.removeEventListener("click", handleClick);
     };
+    // eslint-disable-next-line
   }, [props.index]);
 
   const randomImg = imgArr[props.index];
