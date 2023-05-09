@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory-card-game/static/css/main.1b1fbb78.css",
+    "main.css": "/memory-card-game/static/css/main.d15704a6.css",
     "main.js": "/memory-card-game/static/js/main.7e815985.js",
     "static/media/crocodile.png": "/memory-card-game/static/media/crocodile.bd35528bfe26e5f6126e.png",
     "static/media/logo.png": "/memory-card-game/static/media/logo.5579a0c00775640f28b0.png",
@@ -16,11 +16,11 @@
     "static/media/sanji.png": "/memory-card-game/static/media/sanji.dfedac482d11ae30cfd7.png",
     "static/media/roger.png": "/memory-card-game/static/media/roger.5a132a587edb9936f3b9.png",
     "index.html": "/memory-card-game/index.html",
-    "main.1b1fbb78.css.map": "/memory-card-game/static/css/main.1b1fbb78.css.map",
+    "main.d15704a6.css.map": "/memory-card-game/static/css/main.d15704a6.css.map",
     "main.7e815985.js.map": "/memory-card-game/static/js/main.7e815985.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b1fbb78.css",
+    "static/css/main.d15704a6.css",
     "static/js/main.7e815985.js"
   ]
 }
