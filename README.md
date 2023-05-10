@@ -1,6 +1,6 @@
 # memory-card-game
 
-[Live demo here](https://socryy.github.io/memory-card-game/)
+[Live demo here](https://LeonardoLima01.github.io/memory-card-game/)
 
 This is a memory card game made with React with characters from the One Piece anime.
 
